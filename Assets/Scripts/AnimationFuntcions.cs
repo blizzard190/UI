@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class AnimationFuntcions : MonoBehaviour
 {
-    public void SceneSelect(int scene)
+    Functions _GameManager;
+    void Start()
     {
-        
+        _GameManager = GameObject.Find("GameManager").GetComponent<Functions>();
+    }
+
+    public void Quit()
+    {
+        _GameManager.Quit();
+    }
+
+    public void Lvl(int lvl)
+    {
+        _GameManager.LevelLoad(lvl);
     }
 }
