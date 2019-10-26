@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Functions : MonoBehaviour
 {
-    LoadLvl _LoadLevel;
+    public int lvl;
 
     private void Start()
     {
-        _LoadLevel = this.GetComponent<LoadLvl>();
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void LevelLoad(int level)
     {
-        // _LoadLevel.StartLoad(level);
-        SceneManager.LoadScene(level);
+        lvl = level;
+        SceneManager.LoadScene(1);
     }
 
     public void Quit()

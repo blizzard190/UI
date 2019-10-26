@@ -6,21 +6,24 @@ using UnityEngine;
 
 public class LoadLvl : MonoBehaviour
 {
-    [SerializeField] Image _Progressbar;
+    //[SerializeField] Image _Progressbar;
+    private Functions _Functions;
 
-    public void StartLoad(int lvl)
+    private void Start()
     {
-        StartCoroutine(LoadAsyncOperation(lvl));
+        _Functions = GameObject.Find("GameManager").GetComponent<Functions>();
+        StartCoroutine(LoadAsyncOperation(_Functions.lvl));
     }
 
     IEnumerator LoadAsyncOperation(int lvl)
     {
         AsyncOperation gameLevel = SceneManager.LoadSceneAsync(lvl);
 
-        while(gameLevel.progress < 1)
-        {
-            _Progressbar.fillAmount = gameLevel.progress;
-            yield return new WaitForEndOfFrame();
-        }
+        /* while(gameLevel.progress < 1)
+         {
+             _Progressbar.fillAmount = gameLevel.progress;
+             yield return new WaitForEndOfFrame();
+         }*/
+        yield return new WaitForEndOfFrame();
     }
 }

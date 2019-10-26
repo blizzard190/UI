@@ -21,11 +21,11 @@ public class Button : MonoBehaviour
             _Animator.SetBool("Selected", true);
             if (Input.GetAxis("Submit") == 1)
             {
-                _Animator.SetBool("Pressed", true);
+                _Animator.SetBool("Click", true);
             }
-            else if (_Animator.GetBool("Pressed"))
+            else if (_Animator.GetBool("Click"))
             {
-                _Animator.SetBool("Pressed", false);
+                _Animator.SetBool("Click", false);
             }
         }
         else
