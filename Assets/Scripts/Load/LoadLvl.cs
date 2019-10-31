@@ -13,6 +13,7 @@ public class LoadLvl : MonoBehaviour
     {
         _Functions = GameObject.Find("GameManager").GetComponent<Functions>();
         StartCoroutine(LoadAsyncOperation(_Functions.lvl));
+        Object.Destroy(_Functions.gameObject);
     }
 
     IEnumerator LoadAsyncOperation(int lvl)

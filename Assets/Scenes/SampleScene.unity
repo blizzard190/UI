@@ -242,7 +242,6 @@ GameObject:
   - component: {fileID: 423835975}
   - component: {fileID: 423835974}
   - component: {fileID: 423835973}
-  - component: {fileID: 423835977}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -321,8 +320,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1472442622}
-  - {fileID: 1690725754}
+  - {fileID: 433730022}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -331,13 +329,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &423835977
+--- !u!1 &433730021
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433730022}
+  - component: {fileID: 433730023}
+  - component: {fileID: 433730024}
+  m_Layer: 5
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &433730022
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433730021}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1472442622}
+  - {fileID: 1690725754}
+  m_Father: {fileID: 423835976}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &433730023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 423835972}
+  m_GameObject: {fileID: 433730021}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82a5d1d8a080c1340a3ca09525bc735b, type: 3}
@@ -345,7 +382,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   _Keydown: 0
-  _MaxIndex: 0
+  _MaxIndex: 1
+--- !u!95 &433730024
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433730021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3743892fbecedc645a4139839f28e91e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1197873857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,12 +474,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 423835976}
+    m_TransformParent: {fileID: 433730022}
     m_Modifications:
     - target: {fileID: 1015830713101018751, guid: a1e05ede47b7b3f46aaf031fddcab74c,
         type: 3}
       propertyPath: m_Name
-      value: Button
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 1015830713101018748, guid: a1e05ede47b7b3f46aaf031fddcab74c,
         type: 3}
@@ -488,7 +544,7 @@ PrefabInstance:
     - target: {fileID: 1015830713101018748, guid: a1e05ede47b7b3f46aaf031fddcab74c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -212
+      value: -204
       objectReference: {fileID: 0}
     - target: {fileID: 1015830713101018748, guid: a1e05ede47b7b3f46aaf031fddcab74c,
         type: 3}
@@ -565,6 +621,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: Q U I T  B U T T O N
       objectReference: {fileID: 0}
+    - target: {fileID: 1015830713101019008, guid: a1e05ede47b7b3f46aaf031fddcab74c,
+        type: 3}
+      propertyPath: _ThisIndex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1e05ede47b7b3f46aaf031fddcab74c, type: 3}
 --- !u!224 &1690725754 stripped
@@ -578,7 +639,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 423835976}
+    m_TransformParent: {fileID: 433730022}
     m_Modifications:
     - target: {fileID: 1015830713101018751, guid: a1e05ede47b7b3f46aaf031fddcab74c,
         type: 3}
