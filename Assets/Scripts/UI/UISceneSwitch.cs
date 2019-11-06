@@ -7,12 +7,21 @@ public class UISceneSwitch : MonoBehaviour
     public List<ButtonManager> UIScenes;
     private int _LastActive = 0;
     private int _Active = 0;
-    private ButtonManager _Manager;
 
-    void Update()
+    private void Start()
+    {
+        int child = transform.childCount;
+        for (int i = 0; i < child; i++)
+        {
+            UIScenes[i] = transform.GetChild(i).GetComponent<ButtonManager>();
+        }
+    }
+
+    public void SwitchMenu(int Menu)
     {
         _LastActive = _Active;
-        _Manager = UIScenes[_Active].GetComponent<ButtonManager>();
-        _Manager.CheckActive();
+        UIScenes[_Active].CheckActive();
+        _Active = Menu;
+        UIScenes[_Active].CheckActive();
     }
 }
