@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class LoadLvl : MonoBehaviour
 {
-    //[SerializeField] Image _Progressbar;
+    [SerializeField] Image _Progressbar;
     private Functions _Functions;
 
     private void Start()
@@ -20,11 +20,11 @@ public class LoadLvl : MonoBehaviour
     {
         AsyncOperation gameLevel = SceneManager.LoadSceneAsync(lvl);
 
-        /* while(gameLevel.progress < 1)
+         while(gameLevel.progress < 1)
          {
              _Progressbar.fillAmount = gameLevel.progress;
              yield return new WaitForEndOfFrame();
-         }*/
-        yield return new WaitForEndOfFrame();
+         }
+        //yield return new WaitForEndOfFrame();
     }
 }

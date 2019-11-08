@@ -21,6 +21,7 @@ public class AnimationFuntcions : MonoBehaviour
 
     public void SwitchMenu(int Menu)
     {
+        Debug.Log("fire");
         _UISceneManager.SwitchMenu(Menu);
     }
 

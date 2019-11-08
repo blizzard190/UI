@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 21300000
     second: SF Button - Hover
+  - first:
+      213: 5657003804427112007
+    second: SF Button_0
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -158,13 +161,34 @@ TextureImporter:
         height: 71
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 14, y: 31, z: 13, w: 30}
+      border: {x: 12, y: 29, z: 12, w: 29}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
       spriteID: 02305410000000000800000000000000
       internalID: 21300000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SF Button_0
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 580264d4aadcc484e9fb9611302fd9bb
+      internalID: 5657003804427112007
       vertices: []
       indices: 
       edges: []

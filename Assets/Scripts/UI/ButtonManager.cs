@@ -16,11 +16,11 @@ public class ButtonManager : MonoBehaviour
     {
         _Animator = this.GetComponent<Animator>();
 
-        int children = transform.childCount;
+        /*int children = transform.childCount;
         for (int i = 0; i < children; i++)
         {
             _Buttons[i] = transform.GetChild(i).gameObject;
-        }
+        }*/
     }
 
     void Update()
@@ -76,7 +76,7 @@ public class ButtonManager : MonoBehaviour
             _Animator.SetBool("In", true);
         }
     }
-
+    /*
     public void Activate()
     {
         foreach(GameObject child in _Buttons)
@@ -91,5 +91,5 @@ public class ButtonManager : MonoBehaviour
         {
             child.SetActive(false);
         }
-    }
+    }*/
 }
