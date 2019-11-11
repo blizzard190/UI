@@ -25,6 +25,5 @@ public class LoadLvl : MonoBehaviour
              _Progressbar.fillAmount = gameLevel.progress;
              yield return new WaitForEndOfFrame();
          }
-        //yield return new WaitForEndOfFrame();
     }
 }

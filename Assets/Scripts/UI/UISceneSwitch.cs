@@ -11,17 +11,14 @@ public class UISceneSwitch : MonoBehaviour
     private void Start()
     {
         UIScenes = new List<ButtonManager>();
-        int child = transform.childCount;
-        for (int i = 0; i < child; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            UIScenes[i] = transform.GetChild(i).GetComponent<ButtonManager>();
-            Debug.Log(UIScenes[i].gameObject);
+            UIScenes.Add(this.gameObject.transform.GetChild(i).GetComponent<ButtonManager>());
         }
     }
 
     public void SwitchMenu(int Menu)
     {
-        Debug.Log("ABS");
         _LastActive = _Active;
         UIScenes[_Active].CheckActive();
         _Active = Menu;

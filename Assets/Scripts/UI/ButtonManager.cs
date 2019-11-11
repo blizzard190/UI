@@ -15,12 +15,6 @@ public class ButtonManager : MonoBehaviour
     private void Start()
     {
         _Animator = this.GetComponent<Animator>();
-
-        /*int children = transform.childCount;
-        for (int i = 0; i < children; i++)
-        {
-            _Buttons[i] = transform.GetChild(i).gameObject;
-        }*/
     }
 
     void Update()
