@@ -8,7 +8,7 @@ public class ButtonManager : MonoBehaviour
 
     private Animator _Animator;
     private List<GameObject> _Buttons;
-    private bool _Active;
+    public bool _Active;
     [SerializeField] bool _Keydown;
     [SerializeField] int _MaxIndex;
 
@@ -58,32 +58,15 @@ public class ButtonManager : MonoBehaviour
     {
         if (_Active)
         {
-            _Active = false;
             _Animator.SetBool("In", false);
             _Animator.SetBool("Out", true);
-
+            _Active = false;
         }
         else
         {
-            _Active = true;
             _Animator.SetBool("Out", false);
             _Animator.SetBool("In", true);
+            _Active = true;
         }
     }
-    /*
-    public void Activate()
-    {
-        foreach(GameObject child in _Buttons)
-        {
-            child.SetActive(true);
-        }
-    }
-
-    public void DeActivate()
-    {
-        foreach(GameObject child in _Buttons)
-        {
-            child.SetActive(false);
-        }
-    }*/
 }
